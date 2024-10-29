@@ -118,7 +118,14 @@ local themeStyles = {
         Header = Color3.fromRGB(22, 29, 31),
         TextColor = Color3.fromRGB(255,255,255),
         ElementColor = Color3.fromRGB(22, 29, 31)
-    }
+    },
+    MoonTheme = {
+        SchemeColor = Color3.fromRGB(54, 49, 95),
+        Background = Color3.fromRGB(28, 36, 51),
+        Header = Color3.fromRGB(23, 26, 39),
+        TextColor = Color3.fromRGB(255,255,255),
+        ElementColor = Color3.fromRGB(23, 26, 39)
+    },
 }
 local oldTheme = ""
 
@@ -169,6 +176,8 @@ function Kavo.CreateLib(kavName, themeList)
         themeList = themeStyles.Synapse
     elseif themeList == "Serpent" then
         themeList = themeStyles.Serpent
+    else if themeList == "MoonTheme" then
+        themeList = themeStyles.MoonTheme
     else
         if themeList.SchemeColor == nil then
             themeList.SchemeColor = Color3.fromRGB(74, 99, 135)
